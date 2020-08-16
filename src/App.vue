@@ -1,32 +1,58 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Header/>
+    <TopView/>
+    <router-view></router-view>
+    <Footer/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+  import Header from './components/Header.vue'
+  import TopView from './components/TopView.vue'
+  import Footer from './components/Footer.vue'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  export default {
+    components: {
+      Header,
+      TopView,
+      Footer
     }
   }
-}
+</script>
+
+
+<style lang="scss">
+
+  $black-font:#333333;
+
+  //base
+  @import './scss/base/reset';
+
+  html{
+    font-size: 10px;
+    color:$black-font;
+  }
+
+  p{
+    letter-spacing: .1rem;
+  }
+
+  a{
+    display:inline-block;
+    height:100%;
+    width:100%;
+    transition: .3s;
+  }
+
+  img{
+    width:100%;
+    height:auto;
+  }
+
+  #app {
+
+  }
+
+
 </style>
