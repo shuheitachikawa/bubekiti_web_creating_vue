@@ -53,26 +53,56 @@ $grey-font:#A0A0A0;
   &__list{
     position: absolute;
     left:50%;
+    top:70%;
     transform: translate(-50%, 0);
     display: inline-block;
-    margin-top: 40px;
-    width: 544px;
+    //margin-top: 40px;
+    width: 90%;
+    max-width: 544px;
     display: flex;
     justify-content: space-between;
   }
   &__item{
-    height: 173px;
-    width: 173px;
+    display: block;
+    width: 32%;
+    max-width: 173px;
     border-radius: 50%;
     background-color: $grey-back;
     border: 10px white solid;
-    line-height: 150px;
     font-size: 2rem;
     font-weight: bold;
+    position: relative;
+    a{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -10%);
+    }
+    &:before{
+      content:"";
+      display: block;
+      padding-top: 100%;
+    }
   }
   .contact-btn{
     margin-top: 160px;
-    @include _contactBtn(240px);
+    @include _contactBtn(56px, 240px);
+  }
+}
+
+@media (max-width:500px){
+  .guide{
+    &__container--color{
+      height: 200px;
+    }
+    &__item{
+      a{
+        font-size: 13px;
+      }
+    }
+    .contact-btn{
+    margin-top: 25vw;
+    }
   }
 }
 

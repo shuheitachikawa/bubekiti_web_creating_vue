@@ -68,10 +68,29 @@ $grey-font:#A0A0A0;
   .contact-btn{
     margin-top: 24px;
     margin-bottom: 48px;
-    @include _contactBtn(360px);
+    @include _contactBtn(64px, 360px);
     padding-left: 24px;
     &:before{
       margin-right: 80px;
+    }
+  }
+}
+
+@media (max-width:1000px){
+  .contact{
+    .contact-btn{
+      @include _contactBtn(56px, 250px);
+    }
+  }
+}
+
+@media (max-width:750px){
+  .contact{
+    &__container{
+      display: block;
+    }
+    &__right{
+      margin-top: 48px;
     }
   }
 }

@@ -24,7 +24,7 @@
         </ul>
       </div>
       <div class="works__btnarea">
-        <router-link class="works__btn"  to="/works">制作の特徴</router-link>
+        <router-link class="works__btn"  to="/works">制作物一覧</router-link>
       </div>
     </div>
   </section>
@@ -129,7 +129,7 @@ $grey-font:#A0A0A0;
   }
   &__imgarea{
     width: 100%;
-    height: 279px;
+    height:calc(277 / 309 * 100%);
     overflow: hidden;
   }
   &__txtarea{
@@ -148,4 +148,64 @@ $grey-font:#A0A0A0;
     @include _btn;
   }
 }
+
+@media (max-width:1200px){
+  .works{
+    &__item{
+      width: 400px;
+      height: 247px;
+    }
+  }
+}
+@media (max-width:1000px){
+  .works{
+    &__item{
+      width: 320px;
+      height: 198px;
+    }
+  }
+}
+
+@media (max-width:770px){
+  .works{
+    &__bg{
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width:750px){
+  .works{
+    &__bg{
+      width: 100%;
+    }
+    &__container{
+      text-align: center;
+    }
+    &__title{
+      &:after{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+    &__img{
+      display: none;
+    }
+    &__area{
+      margin-top: 80px;
+      display: block;
+    }
+    &__item{
+      margin: 0 auto 32px;
+      width: calc(100vw * 0.8);
+      height: calc(100vw * 0.8 * 309 / 500);
+    }
+    &__btnarea{
+      margin-top: 64px;
+      text-align: center;
+    }
+  }
+}
+
 </style>

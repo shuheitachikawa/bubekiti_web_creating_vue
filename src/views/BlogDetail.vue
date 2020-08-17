@@ -105,6 +105,7 @@ $grey-font:#A0A0A0;
 
 .blogs-page{
   background-color: $grey-back;
+  padding-top: 16px;
 }
 
 .article-date{
@@ -147,12 +148,12 @@ $grey-font:#A0A0A0;
 }
 .blog__intro{
   font-size: 1.7rem;
-  line-height: 3.2rem;
+  line-height: 3.4rem;
   border:1px dashed $purple;
   padding: 16px;
   margin-bottom: 30px;
     /deep/ li{
-    line-height: 3.2rem;
+    line-height: 3.4rem;
     &::before{
       content:"・ ";
       color:$purple;
@@ -175,15 +176,20 @@ $grey-font:#A0A0A0;
     font-weight: 600;
     margin: 30px 0;
   }
-  /deep/ p{
-    line-height: 3.2rem;
+  /deep/ p, a{
+    font-size: 1.7rem;
+    line-height: 3.4rem;
   }
+  /deep/ li{
+    font-size: 1.7rem;
+    line-height: 3.4rem;
+  }
+
   /deep/ ul{
     list-style: none;
     margin: 30px 0;
   }
   /deep/ li{
-    line-height: 3.2rem;
     &::before{
       content:"・ ";
       color:$purple;
@@ -212,6 +218,53 @@ $grey-font:#A0A0A0;
 }
 .article-area{
   width: 750px;
+}
+
+
+@media (max-width:1000px){
+  .intro-comment{
+    font-size: 18px;
+  }
+  .blog__intro{
+    font-size: 15px;
+    line-height: 30px;
+    /deep/ li{
+      line-height: 4rem;
+    }
+  }
+  .blog__text{
+    /deep/ h2{
+      font-size: 22px;
+      padding-left: 24px;
+      }
+    /deep/ h3{
+      font-size: 20px;
+    }
+    /deep/ p, a{
+      font-size: 16px;
+      line-height: 32px;
+    }
+    /deep/ li{
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+}
+
+
+@media (max-width:650px){
+  .container{
+    width: 95%;
+    padding: 16px 0;
+  }
+  .article{
+    &-title, &-date{
+      text-align: center;
+    }
+  }
+  .blog__content{
+    padding: 8px;
+  }
 }
 
 

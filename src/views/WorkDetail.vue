@@ -3,6 +3,7 @@
     <div class="works-single">
       <h2 class="works-single__title">{{title}}</h2>
       <div class="works-single__pcimg">
+        <img class="pcimg" src="../assets/work.png" alt="">
         <div class="works-single__img">
           <img v-bind:src="image" alt="">
         </div>
@@ -11,16 +12,22 @@
         サイトを見る
       </a>
       <div class="works-single__txtarea">
-        <table class="works-single__table">
+        <table class="works-single__table table-1">
           <tr>
             <td valign="middle"  class="works-single__table-title">公開日</td>
             <td valign="middle" >{{date}}</td>
+          </tr>
+          <tr>
             <td valign="middle"  class="works-single__table-title">制作内容</td>
             <td v-html="work" valign="middle" class="works-single__table-work"></td>
           </tr>
+        </table>
+        <table class="works-single__table table-2">
           <tr>
             <td valign="middle"  class="works-single__table-title">ページ数</td>
             <td valign="middle" >{{page}}</td>
+          </tr>
+          <tr>
             <td valign="middle"  class="works-single__table-title">制作期間</td>
             <td valign="middle" >{{span}}</td>
           </tr>
@@ -122,7 +129,8 @@ $black-font:#333333;
 $grey-font:#A0A0A0;
 
 .workDetail{
-  background-color: $grey-back;
+  background-color: $grey-back; 
+  padding-top: 16px;
 }
 
 .works-single{
@@ -143,7 +151,8 @@ $grey-font:#A0A0A0;
   }
   &__txtarea{
     margin-top: 80px;
-    width: 732px;
+    width: 100%;
+    max-width: 732px;
     margin:0 auto;
     text-align-last: left;
     font-size: 1.6rem;
@@ -193,12 +202,14 @@ $grey-font:#A0A0A0;
   }
   &__link{
     margin: 48px auto 80px;
-    width: 732px;
+    //width: 732px;
     text-align: center;
   }
   &__btn{
     @include _btn;
-    width: 300px;
+    width: 80%;
+    max-width: 300px;
+    //min-width: 150px
   }
   &__other{
     margin-top: 160px;
@@ -242,28 +253,28 @@ $grey-font:#A0A0A0;
   } 
   &__pcimg{
     margin: 0 auto;
-    width: 500px;
-    height: 383px;
-    background-image: url('../assets/work.png');
-    background-size: cover;
+    width: 90%;
+    max-width: 500px;
     position: relative;
   }
   &__img{
     position: absolute;
-    left:9px;
-    top:8px;
-    width:483px;
-    height:279px;
-    overflow: hidden;
+    left:1.6%;
+    top:1.8%;
+    width: 97%;
+    height: 74%;
     overflow-y: scroll;
+    z-index: 0;
   }
   &__table{
-    width: 100%;
+    display: inline-block;
+    width: 50%;
     margin: 40px 0;
     tr{
       height:64px;
+      width: 100%;
       td{
-        width: 25%;
+        width: 1%;
         line-height: 6.4rem;
         border:1px solid $grey-font;
         padding-left: 8px;
@@ -280,5 +291,66 @@ $grey-font:#A0A0A0;
   }
 }
 
+
+@media (max-width:1000px){
+  .works-single__table{
+    tr{
+      td{
+        font-size: 14px;
+      }
+    }
+  }
+  .works-single__text{
+    /deep/ h2{
+      font-size: 22px;
+      padding-left: 24px;
+      }
+    /deep/ h3{
+      font-size: 20px;
+    }
+    /deep/ p, a{
+      font-size: 16px;
+      line-height: 32px;
+    }
+    /deep/ li{
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+}
+
+
+@media (max-width:750px){
+  .works-single{
+    &__txtarea{
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width:600px){
+  .works-single{
+    padding: 8px;
+  }
+}
+
+@media (max-width:500px){
+  .works-single{
+    &__table{
+      display: block;
+      width: 100%;
+      margin: 0;
+      tr{
+        height: 30px;
+      }
+    }
+  }
+  .table-1{
+    margin-top: 40px;
+  }
+  .table-2{
+    margin-bottom: 40px;
+  }
+}
 
 </style>

@@ -69,5 +69,37 @@ $grey-font:#A0A0A0;
   }
 }
 
+@media (max-width:750px){
+  .blogs{
+    &__container{
+      text-align: center;
+    }
+    &__title{
+      &:after{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width:50vw;
+      }
+    }
+    /deep/ &__item{
+      margin: 0 auto 32px;
+      width: calc(100vw * 0.8);
+      height: calc(100vw * 0.8 / 1.4);
+      text-align: left;
+    }
+    /deep/ &__img{
+      height: 80%;
+    }
+    &__btnarea{
+      margin-top: 32px;
+      text-align: center;
+    }
+    &__btn{
+      margin-top: 0;
+    }
+  }
+}
+
 
 </style>

@@ -32,6 +32,7 @@
   html{
     font-size: 10px;
     color:$black-font;
+    font-family: Noto, "Hiragino Sans", Helvetica, Arial, sans-serif;
   }
 
   p{
@@ -52,6 +53,12 @@
 
   #app {
 
+  }
+
+  @media (max-width:1000px){
+    html{
+    font-size: 8px;
+    }
   }
 
 

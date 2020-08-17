@@ -4,7 +4,7 @@
       <ul class="footer__list">
 
         <li class="footer__item">
-          <router-link class="footer__item-name" to="/">TOP</router-link>
+          <a class="footer__item-name" href="#">TOP</a>
         </li>
 
         <li class="footer__item">
@@ -127,4 +127,18 @@ export default {
     font-size: 1.3rem;
   }
 }
+
+@media (max-width:630px){
+  .footer{
+    &__list{
+      display: block;
+    }
+    &__item{
+      margin-bottom: 48px;
+    }
+  }
+}
+
+
+
 </style>

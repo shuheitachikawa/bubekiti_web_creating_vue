@@ -8,9 +8,9 @@
       <h2 class="intro__title">手軽に持てるホームページ</h2>
       <div class="intro__exp">
         <ul class="intro__list">
-          <li class="intro__item">仕事でホームページが必要になった</li>
-          <li class="intro__item">ホームページを新しくしたい</li>
-          <li class="intro__item">サーバー/ドメインの維持費を0円にしたい</li>
+          <li class="intro__item">仕事でホームページが必要になった</li><br>
+          <li class="intro__item">ホームページを新しくしたい</li><br>
+          <li class="intro__item">サーバー/ドメインの維持費を0円にしたい</li><br>
           <li class="intro__item">WordPressからヘッドレスCMSに移行したい</li>
         </ul>
         <p class="intro__txt">
@@ -64,13 +64,14 @@ $grey-font:#A0A0A0;
     margin-top: 40px;
   }
   &__item{
-    width: 500px;
+    width:95vw;
+    max-width: 500px;
     height: 65px;
     line-height: 65px;
     background-color: white;
     margin-bottom: 16px;
     border-radius: 33px;
-    padding-left: 32px;
+    padding: 0 32px;
     font-size: 2rem;
     font-weight: bold;
   }
@@ -99,4 +100,52 @@ $grey-font:#A0A0A0;
     transform: translate(0, -50%);
   }
 }
+
+@media (max-width:1000px){
+  .intro{
+    &__item{
+      max-width: 450px;
+    }
+    &__img{
+      top: 40%;
+    }
+  }
+}
+
+@media (max-width:750px){
+  .intro{
+    text-align: center;
+    &__title{
+      &:after{
+      position: relative;
+      left: 50%;
+      top:8px;
+      transform: translate(-50%, 0);
+    }
+    }
+    &__img{
+      display: none;
+    }
+    &__bg{
+      width: 100%;
+    }
+    &__list{
+      margin-top: 56px;
+    }
+    &__item{
+      margin: 0 auto 16px;
+    }
+  }
+}
+
+@media (max-width:500px){
+  .intro{
+    &__item{
+      margin-bottom: 8px;
+      padding: 0 16px;
+      font-size: 1.8rem;
+    }
+  }
+}
+
 </style>

@@ -1,8 +1,7 @@
-$width:240px;
 
-@mixin _contactBtn($width){
-  height: 64px;
-  line-height: 64px;
+@mixin _contactBtn($height, $width){
+  height: $height;
+  line-height: $height;
   width: $width;
   background-color: $purple;
   color:white;

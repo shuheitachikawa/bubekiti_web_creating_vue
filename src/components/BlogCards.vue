@@ -163,8 +163,8 @@ $grey-font:#A0A0A0;
     transition: .3s;
   }
   &__item{
-    height: 340px;
     width: 360px;
+    height: 340px;
     background-color: white;
     transition: .3s;
     margin-bottom: 24px;
@@ -188,7 +188,7 @@ $grey-font:#A0A0A0;
   }
   &__img{
     width: 100%;
-    height: 240px;
+    height: 67%;
     overflow: hidden;
     position: relative;
     img{
@@ -211,5 +211,30 @@ $grey-font:#A0A0A0;
   }
 }
 
+@media (max-width:1200px){ 
+  .blogs{
+    &__list{
+      justify-content: space-around;
+    }
+    &__item{
+      width: 288px;
+      min-height: 272px;
+    }
+    // &__img{
+    //   height:192px
+    // }
+  }
+}
+@media (max-width:1000px){ 
+  .blogs{
+    // &__list{
+    //   justify-content: space-around;
+    // }
+    &__item{
+      width: 230px;
+      min-height: 218px;
+    }
+  }
+}
 
 </style>

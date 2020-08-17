@@ -7,11 +7,11 @@
       <aside>
         <!-- <BlogAside/> -->
         <div class= "side-bar">
-          <div class="side-bar__item">
+          <div class="side-bar__item serch-area">
             <p class="side-bar__title">SERCH</p>
             <input v-model="serchName" v-on:click="resetSort" type="text" class="side-bar__serch" placeholder="キーワードから検索">
           </div>
-          <div class="side-bar__item">
+          <div class="side-bar__item category-area">
             <p class="side-bar__title">CATEGORY</p>
             <ul>
               <li class="side-bar__category" v-for="(category, index) in categories" v-bind:key="index" v-on:click="sortArticles(index)" v-bind:class="{active: category.isActive}">{{category.name}}</li>
@@ -97,12 +97,13 @@ $grey-font:#A0A0A0;
   flex-wrap: wrap;
 }
 .article-area{
-  width: 750px;
+  width: 75%;
+  max-width: 750px;
 }
 
 
 .side-bar{
-  width: 240px;
+  max-width: 240px;
   &__item{
     margin-bottom:24px;
   }
@@ -143,5 +144,67 @@ $grey-font:#A0A0A0;
   }
 }
 
+
+@media (max-width:750px){
+  .container{
+    padding: 16px;
+    flex-direction: column-reverse;
+  }
+  .side-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: none;
+    &__category{
+      padding: 8px 16px;
+    }
+  }
+  .serch-area{
+    width: 48%;
+  }
+  .category-area{
+    width: 48%;
+  }
+  .article-area{
+    width: 100%;
+  }
+  /deep/ .blogs{
+    &__item{
+      width: 288px;
+      height: 272px;
+    }
+  }
+}
+
+@media (max-width:650px){
+  /deep/ .blogs{
+    &__item{
+      width: 90vw;
+      height: calc(90vw * 272 / 288);
+    }
+  }
+}
+
+@media (max-width:500px){
+  .container{
+    width: 100%;
+    padding: 8px;
+  }
+  .side-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: none;
+    &__category{
+      padding: 8px;
+    }
+  }
+  .serch-area{
+    width: 56%;
+  }
+  .category-area{
+    width: 43%;
+  }
+}
 
 </style>

@@ -8,7 +8,7 @@
             <li class="header__menu--item" exact><router-link to="/works">制作実績</router-link></li>
             <li class="header__menu--item" exact><router-link to="/flow">制作の流れ</router-link></li>
             <li class="header__menu--item" exact><router-link to="/blogs">ブログ</router-link></li>
-            <li class="header__menu--item" exact><router-link to="/inquiry">お問い合わせ</router-link></li>
+            <li class="header__menu--item" exact><router-link to="/inquiry">お問合わせ</router-link></li>
           </ul>
         </nav>
       </div>
@@ -37,7 +37,7 @@
   header{
     height:72px;
     background-color: $grey-back;
-    width:100%;
+    width:100vw;
     position: fixed;
     top:0;
     z-index: 9999;
@@ -65,23 +65,21 @@
       li{
         font-size: 1.6rem;
         font-weight: bold;
+        position: relative;
         & > a{
-          display:inline;
+          display:inline-block;
+          line-height: 72px;
         }
         &:after{
-          display: inline-block;
+          display: block;
           content:'';
           height:20px;
           width:1px;
           background-color:$grey-font;
-          position: relative;
-          left:15px;
-          top:5px;
-          transform: rotate(20deg);
-        }
-        &:last-child{
-          position: relative;
-          top:3px;
+          position: absolute;
+          right:-8px;
+          top:50%;
+          transform: rotate(20deg) translate(0, -50%);
         }
         &:last-child:after{
           display: none;
@@ -93,4 +91,56 @@
     font-size: 1.8rem;
     color: #000;
   }
+
+@media (max-width:750px){
+  header{
+    height: 127px;
+  }
+  .header{
+    &__title{
+      display: block;
+      height: auto;
+      margin-top: 16px;
+      }
+    &__container{
+      display: block;
+    }
+    &__menu{
+      margin-top: 8px;
+      ul{
+        width: 100%;
+      }
+      li{
+        font-weight: bold;
+        position: relative;
+        & > a{
+          display:inline-block;
+          line-height: 50px;
+        }
+        &:after{
+          display: none
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:500px){
+  header{
+    height: 100px;
+  }
+  .header{
+    &__title{
+      margin-top: 13px;
+      width: 128px;
+    }
+    &__menu{
+      margin-top: 0;
+      &--item{
+//        width: 20%;
+        text-align: center;
+      }
+    }
+  }
+}
 </style>

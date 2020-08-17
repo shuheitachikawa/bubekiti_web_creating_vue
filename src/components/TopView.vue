@@ -33,13 +33,18 @@
     <transition name="slide">
       <h1 v-if="$route.path === '/qa'" class="topview__title">{{$route.name}}</h1>
     </transition>
+
+    <div class="topview__img">
+      <img src="../assets/intro.png" alt="手軽に名刺替わりのホームページ制作">
+    </div>
+
     <vue-particles-use
       :number="30"
-      :area="700"
+      :area="1000"
       color="#8400B5"
       shape="circle"
       :opacity="0"
-      :speed="5"
+      :speed="4"
       hoverMode="repulse"
       :distanse="100"
       clickMode="push"
@@ -53,10 +58,10 @@
 
 </script>
 
+
+
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
-
 
 .slide-enter-active{
   transition:1s;
@@ -78,14 +83,17 @@
 }
 
 .topview{
-//  background-color: grey;
   height:90px;
   margin-top: 72px;
   position: relative;
   overflow: hidden;
   transition: .3s;
+  &__img{
+    display: none;
+  }
   &__title{
-    display: block;
+    width: 100%;
+    text-align: center;
     position: absolute;
     top: 50%;
     left:50%;
@@ -94,9 +102,51 @@
     font-weight: bold;
     overflow: hidden;
   }
+  &__area{
+    height: 100%;
+    /deep/ #particles-js{
+      height: 100vh;
+    }
+  }
 }
 .router-link-top{
-  height:calc(100vh - 72px);
+  margin-top: 0;
+  height:100vh;
+}
+
+@media (max-width:750px){
+  .topview{
+    margin-top: 127px;
+    overflow: hidden;
+  }
+  .router-link-top{
+    margin-top: 0;
+    height:100vh;
+    .topview{
+      &__title{
+        top:25%;
+      }
+      &__img{
+        display: block;
+        position: absolute;
+        top:40%;
+        left:10px;
+        z-index: -1;
+        opacity: .7;
+      }
+    }
+  } 
+}
+
+@media (max-width:500px){
+  .topview{
+    margin-top: 100px;
+    overflow: hidden;
+  }
+  .router-link-top{
+    margin-top: 0;
+    height:100vh;
+  }
 }
 
 </style>
