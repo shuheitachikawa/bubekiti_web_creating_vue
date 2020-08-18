@@ -120,18 +120,20 @@ $grey-font:#A0A0A0;
   margin-top: 16px;
   margin-bottom: 80px;
   font-size: 1.6rem;
-  padding: 0 32px;
+  padding: 0;
 }
 
 .service__text{
   /deep/ h2{
     font-size: 2.5rem;
+    line-height: 5rem;
     padding:20px 40px 18px;
     border-left:9px solid $purple;
     margin: 30px 0;
   }
   /deep/ h3{
     font-size: 2rem;
+    line-height: 4rem;
     border-left:9px solid $purple;
     font-weight: 300;
     padding:0 15px;
@@ -169,7 +171,7 @@ $grey-font:#A0A0A0;
   @include _container;
   background-color: white;
   padding: 35px;
-  width: 750px;
+  width: 850px;
 }
 .article-area{
   width: 95%;

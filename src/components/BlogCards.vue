@@ -16,6 +16,7 @@
         </div>
       </router-link>
     </article>
+    <p v-show="Null" class="article-null">当てはまる記事がありません。</p>
   </div>
 
 </template>
@@ -81,6 +82,7 @@ var filterByCategory = function(articles, category){
         articles: null,
         allArticles: null,
         categories: [],
+        Null: false
       };
     },
     created: function(){
@@ -115,8 +117,13 @@ var filterByCategory = function(articles, category){
         });
       },
       serchArticle: function(){
+        this.Null = false;
         this.articles = this.allArticles;
         this.articles = filterByName(this.articles, this.serchName);
+        console.log(this.articles)
+        if(this.articles.length === 0){
+          this.Null = true;
+        }
       },
       sortArticle: function(){
         this.articles = this.allArticles;
@@ -209,6 +216,11 @@ $grey-font:#A0A0A0;
   &__txtarea{
     padding: 8px;
   }
+}
+
+.article-null{
+  font-size: 2rem;
+  margin: 30px auto 60vh;
 }
 
 @media (max-width:1200px){ 

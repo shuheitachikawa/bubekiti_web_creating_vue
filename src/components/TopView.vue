@@ -64,25 +64,40 @@
 <style scoped lang="scss">
 
 .slide-enter-active{
-  transition:1s;
+  transition: .5s;
 }
-// .slide-leave-active{
-//   transition:1s;
-// }
+.slide-leave-active{
+  transition: .5s;
+}
 .slide-enter{
-  opacity:0;
+  transform: translateY(18px) rotateX(90deg);
 }
 .slide-enter-to{
-  opacity: 1;
+  transform: translateY(0px) rotateX(0deg);
 }
 .slide-leave{
-  opacity:0;
+  transform: translateY(0px) rotateX(0deg);
 }
 .slide-leave-to{
-  opacity:0;
+  transform: translateY(-18px) rotateX(-90deg);
+}
+
+@media (max-width:1000px){
+  .slide-enter{
+    transform: translateY(15px) rotateX(90deg);
+  }
+  .slide-leave-to{
+    transform: translateY(-15px) rotateX(-90deg);
+  }
+  // .topview{
+  //   &__title{
+  //     top: 3%;
+  //   }
+  // }
 }
 
 .topview{
+  //background-color: red;
   height:90px;
   margin-top: 72px;
   position: relative;
@@ -95,12 +110,12 @@
     width: 100%;
     text-align: center;
     position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+    top: 35%;
+    //left:50%;
+    //transform: translate(-50%, -50%);
     font-size: 3.2rem;
-    //font-weight: bold;
     overflow: hidden;
+    
   }
   &__area{
     height: 100%;
@@ -112,6 +127,9 @@
 .router-link-top{
   margin-top: 0;
   height:100vh;
+  .topview__title{
+    top:50%;
+  }
 }
 
 @media (max-width:750px){
