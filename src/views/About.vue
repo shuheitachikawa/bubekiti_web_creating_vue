@@ -120,6 +120,7 @@ h2{
 .about{
   &__page{
     background-color: $grey-back;
+    padding-top: 16px;
   }
   &__container{
     @include _container;
@@ -143,10 +144,13 @@ h2{
       justify-content: space-between;
     }
     &-txtarea{
-      width: 70%;
+      width: 68%;
     }
     &-img{
       width: 30%;
+      img{
+        border-radius: 50%;
+      }
     }
   }
   &__profile{
@@ -171,5 +175,44 @@ h2{
     }
   }
 }
+
+
+@media (max-width:650px){
+  .about{
+  &__container{
+    @include _container;
+    padding: 8px;
+  }
+  &__person{
+    &-wrapper{
+      display: block;
+    }
+    &-txtarea{
+      width: 100%;
+    }
+    &-img{
+      width: 70%;
+      margin: 16px auto 24px;
+    }
+  }
+  &__profile{
+    border-bottom: none;
+    &-table{
+      width: 95%;
+      tr{
+        height: 45px;
+        line-height: 45px;
+      }
+      .tabel-item{
+        width: 25%;
+      }
+      .table-value{
+        width: 75%;
+      }
+    }
+  }
+}
+}
+
 
 </style>

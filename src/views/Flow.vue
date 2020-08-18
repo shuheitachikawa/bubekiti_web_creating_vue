@@ -91,7 +91,8 @@ $grey-font:#A0A0A0;
   position: relative;
   padding: 35px;
   &__image{
-    width: 500px;
+    width: 70%;
+    max-width: 500px;
     margin: 0 auto;
   }
   &__exp{
@@ -132,6 +133,7 @@ $grey-font:#A0A0A0;
   }
   &__title{
     font-size: 2rem;
+    line-height: 3rem;
     font-weight: bold;
     margin-bottom: 16px;
   }
@@ -156,5 +158,21 @@ $grey-font:#A0A0A0;
   }
 }
 
+@media (max-width:650px){
+  .flow{
+    padding: 8px;
+    padding-bottom: 80px;
+    &__item{
+      padding: 16px 20px;
+      border-radius: 10px;
+    }
+    &__title{
+      margin-bottom: 10px;
+    }
+    &__btn-area{
+      margin-top: 80px;
+    }
+  }
+}
 
 </style>

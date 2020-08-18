@@ -14,8 +14,7 @@
           <div class="form__submit" v-on:click="ConfilmOrBack">確認</div>
         </form>
         <p class="form__sub-txt">
-          お客様のプライバシー・個人情報は、
-          お問合せいただいた内容に関するご返答をさし上げる以外の目的では使用いたしません。
+          お客様のプライバシー・個人情報は、お問合せいただいた内容に関するご返答をさし上げる以外の目的では使用いたしません。
         </p>
       </div>
     </transition>
@@ -147,8 +146,12 @@ $grey-font:#A0A0A0;
     padding: 35px;
     font-size: 1.6rem;
   }
+  &__exp{
+    line-height: 2.5rem;  
+  }
   &__area{
-    width: 732px;
+    width: 100%;
+    max-width: 732px;
     margin: 0 auto;
   }
   &__list{
@@ -175,6 +178,7 @@ $grey-font:#A0A0A0;
   &__sub-txt{
     color:grey;
     font-size: 1.5rem;
+    line-height: 2.2rem;
     margin-top: 40px;
     margin-bottom: 80px;
   }
@@ -218,7 +222,9 @@ input, textarea{
     margin-top: 40px;
     display: inline-block;
     text-align: center;
-    width:200px;
+    width: 30%;
+    max-width:200px;
+    min-width:130px;
     height: 56px;
     line-height: 56px;
     margin: 40px auto 0;
@@ -232,6 +238,15 @@ input, textarea{
     &.submit{
       background-color: $purple;
       margin-left: 16px;
+    }
+  }
+}
+
+
+@media (max-width:650px){
+  .form{
+    &__page{
+      padding: 35px 16px;
     }
   }
 }

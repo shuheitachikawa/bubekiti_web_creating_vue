@@ -113,7 +113,7 @@ $grey-font:#A0A0A0;
     align-items: center;
   }
   &__txt{
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: calc(309px - 277px);
   }
   &__item:nth-child(n + 3){
@@ -204,7 +204,6 @@ $grey-font:#A0A0A0;
     &__txt{
       line-height: calc(198px * 0.1);
     }
-
     &__item:nth-child(n + 3){
       width: 224px;
       height: 138px;
@@ -239,6 +238,9 @@ $grey-font:#A0A0A0;
     &__img{
       height:calc(277 / 309 * 100%);
       overflow: hidden;
+    }
+    &__txt{
+      font-size: 2rem;;
     }
     &__item:nth-child(n + 3){
       width: 80%;

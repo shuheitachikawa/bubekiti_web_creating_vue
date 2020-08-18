@@ -89,6 +89,7 @@
   }
   a.router-link-active{
     font-size: 1.8rem;
+    //zoom:1.2;
     color: #000;
   }
 

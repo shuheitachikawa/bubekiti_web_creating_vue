@@ -28,7 +28,8 @@ $grey-font:#A0A0A0;
   &__btn{
     @include _btn;
     text-align: center;
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
   }
   &__txt{
     color:white;

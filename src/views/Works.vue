@@ -124,4 +124,21 @@ $grey-font:#A0A0A0;
 }
 
 
+@media (max-width:750px){
+  .container{
+    padding: 35px 8px;
+  }
+  .works{
+    &__list{
+      display: block;
+    }
+    &__item{
+      margin: 0 auto 56px;
+      width: 80vw;
+      height: calc(80vw * 190 / 310);
+    }
+  }
+}
+
+
 </style>

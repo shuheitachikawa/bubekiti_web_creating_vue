@@ -138,4 +138,18 @@ p{
   }
 }
 
+
+@media (max-width:650px){
+  .qa{
+    &__container{
+      padding: 35px 0 80px;
+    }
+    &__item.active{
+      border-radius: 20px;
+      transition: .3s;
+      padding-left: 20px;
+    }
+  }
+}
+
 </style>

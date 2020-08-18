@@ -154,7 +154,7 @@ $grey-font:#A0A0A0;
     width: 100%;
     max-width: 732px;
     margin:0 auto;
-    text-align-last: left;
+    text-align: left;
     font-size: 1.6rem;
     line-height: 1.7;
     padding:32px;

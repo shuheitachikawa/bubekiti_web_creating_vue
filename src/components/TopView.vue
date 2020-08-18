@@ -99,7 +99,7 @@
     left:50%;
     transform: translate(-50%, -50%);
     font-size: 3.2rem;
-    font-weight: bold;
+    //font-weight: bold;
     overflow: hidden;
   }
   &__area{

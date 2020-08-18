@@ -1,5 +1,5 @@
 <template>
-  <div class="blogs-page">
+  <div class="service-page">
     <div class="container">
       <div class="article-area">
             
@@ -7,8 +7,8 @@
         <div class="eyecatch">
           <img v-bind:src="image" alt="">  
         </div>
-        <div class="blog__content">
-          <div class="blog__text" v-html="text"></div>   
+        <div class="service__content">
+          <div class="service__text" v-html="text"></div>   
         </div>       
       </div>
     </div>
@@ -101,9 +101,6 @@ $grey-back:#F4F4F4;
 $black-font:#333333;
 $grey-font:#A0A0A0;
 
-.blogs-page{
- // background-color: $grey-back;
-}
 
 .article-title{
   text-align: center;
@@ -119,14 +116,14 @@ $grey-font:#A0A0A0;
 }
 
 
-.blog__content{
+.service__content{
   margin-top: 16px;
   margin-bottom: 80px;
   font-size: 1.6rem;
   padding: 0 32px;
 }
 
-.blog__text{
+.service__text{
   /deep/ h2{
     font-size: 2.5rem;
     padding:20px 40px 18px;
@@ -175,7 +172,8 @@ $grey-font:#A0A0A0;
   width: 750px;
 }
 .article-area{
-  width: 750px;
+  width: 95%;
+  max-width: 750px;
   margin: 0 auto;
 }
 
@@ -192,8 +190,43 @@ $grey-font:#A0A0A0;
 }
 .link-btn{
   margin: 0 8px;
+  width: 40%;
+  max-width: 320px;
 }
 
 
+
+@media (max-width:1000px){
+  .service__text{
+    /deep/ h2{
+      font-size: 22px;
+      padding-left: 24px;
+      }
+    /deep/ h3{
+      font-size: 20px;
+    }
+    /deep/ p, a{
+      font-size: 16px;
+      line-height: 32px;
+    }
+    /deep/ li{
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+}
+
+@media (max-width:650px){
+  .container{
+    width: 100%;
+    padding: 0;
+  }
+  .article-area{
+    width: 100%;
+  }
+  .service__content{
+    padding: 0 16px;
+  }
+}
 
 </style>
