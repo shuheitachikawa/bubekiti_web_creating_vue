@@ -3,12 +3,12 @@
     <div class="about__container">
       
       <div class="about__strength">
-        <h2 class="about__strength-title">Bubekiti Web creatingの強み</h2>
+        <h2 class="about__strength-title">制作の特徴</h2>
         <p v-html="strength" class="about__strength-text"></p>
       </div>
 
       <div class="about__person">
-        <h2 class="about__person-title">制作者</h2>
+        <h2 class="about__person-title">制作者について</h2>
         <div class="about__person-wrapper">
           <div class="about__person-img">
             <img v-show="!real" src="../assets/bubekiti_fake.png" alt="">

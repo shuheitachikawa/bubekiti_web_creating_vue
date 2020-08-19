@@ -67,7 +67,7 @@ Vue.use(VueRouter)
   },
    {
     path: '/about',
-    name: 'Bubekiti Web creatingについて',
+    name: 'Bubekiti Web creating',
     component: About
   },
 ]

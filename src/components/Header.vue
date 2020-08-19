@@ -4,12 +4,14 @@
         <router-link class="header__title" to="/"><img src="../assets/title.png" alt=""></router-link>
         <nav class="header__menu" id="nav">
           <ul class="header__menu--list">
-            <li class="header__menu--item" exact><router-link to="/services">サービスaaa</router-link></li>
+            <li class="header__menu--item" exact><router-link to="/services">サービス</router-link></li>
             <li class="header__menu--item" exact><router-link to="/works">制作実績</router-link></li>
             <li class="header__menu--item" exact><router-link to="/flow">制作の流れ</router-link></li>
+            <li class="header__menu--item" exact><router-link to="/about">事業内容</router-link></li>
             <li class="header__menu--item" exact><router-link to="/blogs">ブログ</router-link></li>
-            <li class="header__menu--item" exact><router-link to="/inquiry">お問合わせ</router-link></li>
+            <li class="header__menu--item inquiry-menu-pc" exact><router-link to="/inquiry">お問い合わせ</router-link></li>
           </ul>
+            <div class="inquiry-menu-sp" exact><router-link to="/inquiry">お問合わせ</router-link></div>
         </nav>
       </div>
     </header>
@@ -57,7 +59,7 @@
     }
     &__menu{
       ul{
-        width:465px;
+        width:558px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -93,6 +95,22 @@
     color: #000;
   }
 
+  .inquiry-menu-sp{
+    display: none;
+    font-size: 1.6rem;
+  }
+
+
+@media (max-width:1000px){
+  .header{
+    &__menu{
+      ul{
+        width:450px;
+      }
+    }
+  }
+}
+
 @media (max-width:750px){
   header{
     height: 127px;
@@ -108,6 +126,7 @@
     }
     &__menu{
       margin-top: 8px;
+      position: relative;
       ul{
         width: 100%;
       }
@@ -123,6 +142,27 @@
         }
       }
     }
+  }
+  .inquiry-menu-sp{
+    display: block;
+    position: absolute;
+    right:0;
+    top:-70%;
+    // background-color: $purple;
+    // padding: 8px 10px;
+    // border-radius: 20px;
+    a{
+      color:white;
+      background-color: $purple;
+    padding: 8px 10px;
+    border-radius: 20px;
+      &.router-link-active{
+        background-color: lighten($purple, 10%);
+      }
+    }
+  }
+  .inquiry-menu-pc{
+    display: none;
   }
 }
 

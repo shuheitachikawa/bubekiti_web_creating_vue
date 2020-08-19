@@ -92,8 +92,8 @@ $grey-font:#A0A0A0;
     flex-wrap: wrap;
   }
   &__item{
-    width: 310px;
-    height: 190px;
+    width: 279px;
+    height: 171px;
     margin-bottom: 80px;
     background-color: white;
     position: relative;
@@ -113,7 +113,7 @@ $grey-font:#A0A0A0;
   }
   &__txt{
     line-height: 30px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 }

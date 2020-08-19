@@ -5,19 +5,21 @@
       <img src="../assets/intro.png" alt="手軽に名刺替わりのホームページ制作">
     </div>
     <div class="intro__container">
-      <h2 class="intro__title">手軽に持てるホームページ</h2>
+      <h2 class="intro__title">Webサイトでビジネスを後押し</h2>
       <div class="intro__exp">
         <ul class="intro__list">
-          <li class="intro__item">仕事でホームページが必要になった</li><br>
-          <li class="intro__item">ホームページを新しくしたい</li><br>
-          <li class="intro__item">サーバー/ドメインの維持費を0円にしたい</li><br>
-          <li class="intro__item">WordPressからヘッドレスCMSに移行したい</li>
+          <li class="intro__item">仕事でホームページが必要になった</li>
+          <li class="intro__item">ホームページを新しくしたい</li>
+          <li class="intro__item">SNSと並行して情報発信を増やしたい</li>
+          <li class="intro__item">WordPressのメンテナンス工数を減らしたい</li>
         </ul>
         <p class="intro__txt">
-          手軽に持ちたい方にも対応した、<br>
-          ホームページを制作します。
+          お客様の「欲しい/こうしたい」をWebの技術で実現します。
         </p>
-        <router-link class="intro__btn"  to="/about">制作の特徴</router-link>
+        <p class="intro__txt-exp">
+          Bubekiti(ブベキチ) Web creatingは、神奈川県秦野市を拠点に活動しているWeb制作フリーランス(SOHO)です。神奈川・東京を中心にWeb制作業務(ホームページ制作 / HTMLコーディング / レスポンシブデザイン / CMS構築)を承っております。見やすいシンプルなデザインとモダンな開発技術を用いた制作で、クライアント様の要望にお応えします。
+        </p>
+        <router-link class="intro__btn"  to="/about">制作の特徴 & 制作者について</router-link>
       </div>
     </div>
   </section>
@@ -47,14 +49,14 @@ $grey-font:#A0A0A0;
 
 
 .intro{
-  margin-top: 160px;
+  margin-top: 80px;
   position: relative;
   &__container{
     @include _container;
     padding-top: 40px;
   }
   &__title{
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: bold;
     &:after{
       @include _title-bar;
@@ -66,41 +68,56 @@ $grey-font:#A0A0A0;
   &__item{
     width:95vw;
     max-width: 500px;
-    height: 65px;
-    line-height: 65px;
+    height: 55px;
+    line-height: 55px;
     background-color: white;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     border-radius: 33px;
     padding: 0 32px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
   }
   &__txt{
-    margin-top: 48px;
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: bold;
+    line-height: 4rem;
+  }
+  &__txt-exp{
+    width: 50%;
+    margin-top: 48px;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
   }
   &__btn{
-    margin-top: 48px;
+    margin-top: 24px;
     @include _btn;
+    width: initial;
   }
   &__bg{
     position: absolute;
     top:0;
-    z-index: -1;
+    z-index: -2;
     background-color: $grey-back;
     height: 100%;
     width: 70%;
   }
   &__img{
+    z-index: -1;
     width: 50vw;
+    max-width: 660px;
     position: absolute;
-    right:0;
+    right:12%;
     top: 50%;
     transform: translate(0, -50%);
   }
 }
-
+@media (max-width:1600px){
+  .intro{
+    &__img{
+      right:5%;
+    }
+  }
+}
 @media (max-width:1000px){
   .intro{
     &__item{
@@ -108,6 +125,13 @@ $grey-font:#A0A0A0;
     }
     &__img{
       top: 40%;
+      z-index: 1;
+    }
+    &__txt-exp{
+      width: 100%;
+      margin-top: 40px;
+      font-size: 1.6rem;
+      line-height: 3.2rem;
     }
   }
 }
@@ -135,15 +159,20 @@ $grey-font:#A0A0A0;
     &__item{
       margin: 0 auto 16px;
     }
+    &__txt, &__txt-exp{
+      text-align: left;
+    }
   }
 }
 
 @media (max-width:500px){
   .intro{
     &__item{
-      margin-bottom: 8px;
+      margin-bottom: 16px;
       padding: 0 16px;
       font-size: 1.8rem;
+      height: 45px;
+      line-height: 45px;
     }
   }
 }

@@ -170,8 +170,8 @@ $grey-font:#A0A0A0;
     transition: .3s;
   }
   &__item{
-    width: 360px;
-    height: 340px;
+    width: 324px;
+    height: 306px;
     background-color: white;
     transition: .3s;
     margin-bottom: 24px;
@@ -179,13 +179,14 @@ $grey-font:#A0A0A0;
       opacity: .7;
     }
     &--title{
-      font-size: 2rem;
+      font-size: 1.8rem;
+      line-height: 2.5rem;
       font-weight: bold;
     }
     &--time{
       display: block;
       font-size: 1.2rem;
-      margin-top: 16px;
+      margin-top: 8px;
       p{
         margin-left: 8px;
         display: inline-block;
@@ -195,7 +196,7 @@ $grey-font:#A0A0A0;
   }
   &__img{
     width: 100%;
-    height: 67%;
+    //height: 70%;
     overflow: hidden;
     position: relative;
     img{
@@ -223,28 +224,30 @@ $grey-font:#A0A0A0;
   margin: 30px auto 60vh;
 }
 
-@media (max-width:1200px){ 
+
+// @media (max-width:1200px){ 
+//   .blogs{
+//     &__list{
+//       justify-content: space-around;
+//     }
+//     &__item{
+//       width: 288px;
+//       min-height: 272px;
+//       &--time{
+//         margin-top: 8px;
+//       }
+//     }
+//   }
+// }
+@media (max-width:1050px){ 
   .blogs{
     &__list{
       justify-content: space-around;
     }
     &__item{
-      width: 288px;
-      min-height: 272px;
-    }
-    // &__img{
-    //   height:192px
-    // }
-  }
-}
-@media (max-width:1000px){ 
-  .blogs{
-    // &__list{
-    //   justify-content: space-around;
-    // }
-    &__item{
       width: 230px;
-      min-height: 218px;
+      height: 240px;
+      min-height: 200px;
     }
   }
 }

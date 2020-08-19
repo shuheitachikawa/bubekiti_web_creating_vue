@@ -38,7 +38,7 @@ $grey-font:#A0A0A0;
 
 
 .guide{
-  margin-top: 160px;
+  margin-top: 100px;
   text-align: center;
   &__container--color{
     height: 260px;

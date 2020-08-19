@@ -41,7 +41,7 @@ $grey-font:#A0A0A0;
 
 
 .blogs{
-  margin-top: 160px;
+  margin-top: 100px;
   background-color: $grey-back;
   padding-top: 40px;
   &__container{
@@ -65,7 +65,7 @@ $grey-font:#A0A0A0;
   }
   &__btn{
     @include _btn;
-    margin: 40px 0 160px;
+    margin: 40px 0 80px;
   }
 }
 

@@ -205,6 +205,11 @@ $grey-font:#A0A0A0;
   .category-area{
     width: 43%;
   }
+  /deep/ .blogs{
+    &__img{
+      height: 70%;
+    }
+  }
 }
 
 </style>

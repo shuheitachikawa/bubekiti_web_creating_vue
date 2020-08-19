@@ -1,7 +1,10 @@
 <template>
   <section class="service">
     <div class="service__container">
-      <h2 class="service__title">サービス</h2>
+      <h2 class="service__title">サービス一覧</h2>
+      <p class="service__txt-exp">
+        
+      </p>
       <ul class="service__list">
 
         <!-- 記事アイコン -->
@@ -93,8 +96,8 @@ $grey-font:#A0A0A0;
     flex-wrap: wrap;
   }
   &__item{
-    width:500px;
-    height: 309px;
+    width:450px;
+    height: 278px;
     margin-bottom: 40px;
     //box-shadow: 1px 1px 2px #9c9c9c;
     border-bottom: 1px solid $grey-back;
@@ -117,8 +120,8 @@ $grey-font:#A0A0A0;
     line-height: calc(309px - 277px);
   }
   &__item:nth-child(n + 3){
-    width:350px;
-    height:216px;
+    width:315px;
+    height:194px;
     position: relative;
     .service__img{
       height:100%;

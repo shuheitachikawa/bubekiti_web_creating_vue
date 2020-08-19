@@ -64,37 +64,28 @@
 <style scoped lang="scss">
 
 .slide-enter-active{
-  transition: .5s;
+  transition: .7s;
 }
 .slide-leave-active{
-  transition: .5s;
+  transition: .7s;
 }
 .slide-enter{
-  transform: translateY(18px) rotateX(90deg);
+  color:transparent;
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
+  opacity: 0;
 }
 .slide-enter-to{
-  transform: translateY(0px) rotateX(0deg);
+  text-shadow: none;
 }
 .slide-leave{
-  transform: translateY(0px) rotateX(0deg);
+  text-shadow: none;
 }
 .slide-leave-to{
-  transform: translateY(-18px) rotateX(-90deg);
+  color:transparent;
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
+  opacity: 0;
 }
 
-@media (max-width:1000px){
-  .slide-enter{
-    transform: translateY(15px) rotateX(90deg);
-  }
-  .slide-leave-to{
-    transform: translateY(-15px) rotateX(-90deg);
-  }
-  // .topview{
-  //   &__title{
-  //     top: 3%;
-  //   }
-  // }
-}
 
 .topview{
   //background-color: red;
@@ -115,7 +106,6 @@
     //transform: translate(-50%, -50%);
     font-size: 3.2rem;
     overflow: hidden;
-    
   }
   &__area{
     height: 100%;

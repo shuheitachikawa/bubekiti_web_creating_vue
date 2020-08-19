@@ -94,8 +94,9 @@ $grey-font:#A0A0A0;
   }
   &__img{
     width: 50vw;
+    max-width: 660px;
     position: absolute;
-    left:0;
+    left:12%;
     top: 50%;
     transform: translate(0, -50%);
   }
@@ -149,6 +150,13 @@ $grey-font:#A0A0A0;
   }
 }
 
+@media (max-width:1600px){
+  .works{
+    &__img{
+      left:5%;
+    }
+  }
+}
 @media (max-width:1200px){
   .works{
     &__item{
