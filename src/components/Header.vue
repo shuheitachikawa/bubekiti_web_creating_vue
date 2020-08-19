@@ -129,6 +129,7 @@
       position: relative;
       ul{
         width: 100%;
+        justify-content: space-around;
       }
       li{
         font-weight: bold;
@@ -154,8 +155,8 @@
     a{
       color:white;
       background-color: $purple;
-    padding: 8px 10px;
-    border-radius: 20px;
+      padding: 8px 10px;
+      border-radius: 20px;
       &.router-link-active{
         background-color: lighten($purple, 10%);
       }
