@@ -4,7 +4,7 @@
         <router-link class="header__title" to="/"><img src="../assets/title.png" alt=""></router-link>
         <nav class="header__menu" id="nav">
           <ul class="header__menu--list">
-            <li class="header__menu--item" exact><router-link to="/services">サービス</router-link></li>
+            <li class="header__menu--item" exact><router-link to="/services">サービスaaa</router-link></li>
             <li class="header__menu--item" exact><router-link to="/works">制作実績</router-link></li>
             <li class="header__menu--item" exact><router-link to="/flow">制作の流れ</router-link></li>
             <li class="header__menu--item" exact><router-link to="/blogs">ブログ</router-link></li>
