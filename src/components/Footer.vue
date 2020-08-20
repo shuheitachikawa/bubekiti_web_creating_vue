@@ -29,7 +29,7 @@
           <p class="footer__item-name">GUIDE</p>
           <ul class="footer__sub-list">
             <li class="footer__sub-item"><router-link to="/flow">制作の流れ</router-link></li>
-            <li class="footer__sub-item">かんたんお見積もり</li>
+            <li class="footer__sub-item no-hover"><BtnToQuote class="footer__quote"/></li>
             <li class="footer__sub-item"><router-link to="/qa">よくある質問</router-link></li>
 
           </ul>
@@ -51,10 +51,12 @@
 </template>
 
 <script>
+import BtnToQuote from '@/components/BtnToQuote.vue'
+
 export default {
   name: 'Footer',
   components: {
-
+    BtnToQuote
   },
   data: function(){
     return {
@@ -125,6 +127,26 @@ export default {
     text-align: center;
     margin-top: 56px;
     font-size: 1.3rem;
+  }
+}
+.no-hover:hover{
+  opacity: 1;
+}
+
+/deep/ .quote{
+  &__btn{
+    display: block;
+    background: transparent;
+    height: initial;
+    width: initial;
+  }
+  &__txt{
+    font-size: 1.3rem;
+    color:$grey-font;
+    font-weight: normal;
+  }
+  &__sec{
+    display: none;
   }
 }
 

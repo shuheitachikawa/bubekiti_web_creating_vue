@@ -1,5 +1,6 @@
 
 @mixin _contactBtn($height, $width){
+  user-select:none;
   height: $height;
   line-height: $height;
   width: $width;

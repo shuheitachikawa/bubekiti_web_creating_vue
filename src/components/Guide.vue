@@ -4,7 +4,8 @@
       <h2 class="guide__title">ご利用の手引き</h2>
       <div class="guide__list">
         <div class="guide__item"><router-link to="/flow">制作の流れ</router-link></div>
-        <div class="guide__item"><router-link to="/calc">簡単見積もり</router-link></div>
+        <!-- <div class="guide__item"><router-link to="/calc">簡単見積もり</router-link></div> -->
+        <BtnToQuote class="guide__item"/>
         <div class="guide__item"><router-link to="/qa">よくある質問</router-link></div>
       </div>
     </div>
@@ -15,9 +16,13 @@
 </template>
 
 <script>
-// export default {
-//   name: 'Works',
-// }
+import BtnToQuote from '@/components/BtnToQuote.vue'
+export default {
+  name: 'Guide',
+  components: {
+    BtnToQuote
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -51,18 +56,20 @@ $grey-font:#A0A0A0;
     @include _sectionTitle('GUIDE');
   }
   &__list{
-    position: absolute;
-    left:50%;
-    top:70%;
-    transform: translate(-50%, 0);
+    // position: absolute;
+    // left:50%;
+    // top:70%;
+    // transform: translate(-50%, 0);
+    margin: 0 auto;
     display: inline-block;
-    //margin-top: 40px;
+    margin-top: 40px;
     width: 90%;
     max-width: 544px;
     display: flex;
     justify-content: space-between;
   }
   &__item{
+    user-select:none;
     display: block;
     width: 32%;
     max-width: 173px;
@@ -90,6 +97,27 @@ $grey-font:#A0A0A0;
   }
 }
 
+/deep/ .quote{
+  &__btn{
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: transparent;
+  }
+  &__txt{
+    position: absolute;
+    width: 100%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -40%);
+    color:$black-font;
+    font-size: 1.8rem;
+  }
+}
+
 @media (max-width:500px){
   .guide{
     &__container--color{
@@ -102,6 +130,11 @@ $grey-font:#A0A0A0;
     }
     .contact-btn{
     margin-top: 25vw;
+    }
+  }
+  /deep/ .quote{
+    &__txt{
+      font-size: 13px;
     }
   }
 }

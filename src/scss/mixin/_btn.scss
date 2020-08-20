@@ -1,6 +1,7 @@
 $initType: 'normal';
 
 @mixin _btn($type:$initType){
+  user-select:none;
   width: 180px;
   height: 48px;
   background-color: black;

@@ -34,13 +34,14 @@ export default {
   components: {
     Contact,
     BtnToQuote,
-    BtnToQa
+    BtnToQa,
   },
   data: function(){
     return {
       eyecatch: null,
       exp: null,
       flows: null,
+      quote: true
     };
   },
   created: function(){
@@ -62,7 +63,7 @@ export default {
       .catch(error => {
         console.log(error);
       })
-    },      
+    },
   }
 }
 </script>
