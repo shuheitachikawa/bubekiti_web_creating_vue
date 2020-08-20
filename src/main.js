@@ -36,7 +36,7 @@ new Vue({
       { name: 'twitter:site', content: '@bubekiti' },
       { name: 'twitter:domain', content: 'bubekiti.com' },
       { name: 'twitter:title', content: 'Bubekiti Web creating | 神奈川県秦野市のWeb制作フリーランス' },
-      { property: 'twitter:description', content: '神奈川県秦野市を拠点に活動しているWeb制作フリーランス(SOHO)です。神奈川・東京を中心にWeb制作業務(ホームページ制作 / HTMLコーディング / レスポンシブデザイン / CMS構築)を承っております。見やすいシンプルなデザインとモダンな開発技術を用いた制作で、クライアント様の要望にお応えします。' },
+      { name: 'twitter:description', content: '神奈川県秦野市を拠点に活動しているWeb制作フリーランス(SOHO)です。神奈川・東京を中心にWeb制作業務(ホームページ制作 / HTMLコーディング / レスポンシブデザイン / CMS構築)を承っております。見やすいシンプルなデザインとモダンな開発技術を用いた制作で、クライアント様の要望にお応えします。' },
       //{ property: 'twitter:image', content: '../src/assets/ogimage.jpg' },
       // ... 
     ],
