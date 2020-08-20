@@ -90,7 +90,7 @@ $grey-font:#A0A0A0;
     background-color: $grey-back;
     height:100%;
     //width:calc(1100px + (100vw - 1100px) /2);
-    width: 70%;
+    width: 90%;
   }
   &__img{
     width: 50vw;

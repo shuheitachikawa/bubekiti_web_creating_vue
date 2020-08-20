@@ -99,7 +99,7 @@ $grey-font:#A0A0A0;
     z-index: -2;
     background-color: $grey-back;
     height: 100%;
-    width: 70%;
+    width: 90%;
   }
   &__img{
     z-index: -1;
