@@ -86,7 +86,7 @@ export default {
     changeImage: function(){
       this.real = true;
     }
-  }
+  },
 }
 </script>
 

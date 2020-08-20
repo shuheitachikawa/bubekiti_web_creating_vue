@@ -4,7 +4,7 @@
       <ul class="footer__list">
 
         <li class="footer__item">
-          <a class="footer__item-name" href="#">TOP</a>
+           <router-link class="footer__item-name" to="/">TOP</router-link>
         </li>
 
         <li class="footer__item">
@@ -144,6 +144,7 @@ export default {
     font-size: 1.3rem;
     color:$grey-font;
     font-weight: normal;
+    text-align: left;
   }
   &__sec{
     display: none;
