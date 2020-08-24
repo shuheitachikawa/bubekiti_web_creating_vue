@@ -118,7 +118,7 @@ $grey-font:#A0A0A0;
   font-weight: bold;
   margin-top: 16px;
   margin-bottom: 24px;
-  line-height: 4.8rem;
+  line-height: 4rem;
 }
 
 .eyecatch{
@@ -212,6 +212,7 @@ $grey-font:#A0A0A0;
 
 .container{
   @include _container;
+  max-width: 1050px;
   background-color: white;
   padding: 35px;
   display: flex;
