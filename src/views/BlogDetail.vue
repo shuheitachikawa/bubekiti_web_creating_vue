@@ -117,6 +117,8 @@ $grey-font:#A0A0A0;
   font-size: 2.4rem;
   font-weight: bold;
   margin-top: 16px;
+  margin-bottom: 24px;
+  line-height: 4.8rem;
 }
 
 .eyecatch{
@@ -135,10 +137,10 @@ $grey-font:#A0A0A0;
 }
 
 .blog__content{
-  margin-top: 16px;
+  margin-top: 24px;
   margin-bottom: 80px;
   font-size: 1.6rem;
-  padding: 0 32px;
+  padding: 0 16px;
 }
 .intro-comment{
   margin-top: 30px;
@@ -218,6 +220,9 @@ $grey-font:#A0A0A0;
 }
 .article-area{
   width: 750px;
+}
+.aside-o{
+  width: 170px;
 }
 
 

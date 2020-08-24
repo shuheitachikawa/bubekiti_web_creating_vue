@@ -10,7 +10,7 @@
     <div class="aside-card about-card">
       <router-link to="/about">
         <p>
-          Bubekiti Web creating<br>について
+          Bubekitiについて
         </p>
       </router-link>
     </div>
