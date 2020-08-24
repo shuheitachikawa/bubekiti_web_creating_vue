@@ -22,47 +22,47 @@ Vue.use(VueRouter)
   },
   {
     path: '/services',
-    name: 'サービス一覧',
+    name: 'SERVICE',
     component: Services
   },
   {
     path: '/services/:serviceId',
-    name: 'サービス',
+    name: 'SERVICE',
     component: ServiceDetail
   },
   {
     path: '/works',
-    name: '制作実績一覧',
+    name: 'WORKS',
     component: Works
   },
   {
     path: '/works/:workId',
-    name: '制作実績',
+    name: 'WORK',
     component: WorkDetail
   },
   {
     path: '/flow',
-    name: '制作の流れ',
+    name: 'FLOW',
     component: Flow
   },
   {
     path: '/blogs',
-    name: 'ブログ一覧',
+    name: 'BLOGS',
     component: Blogs
   },
   {
     path: '/blogs/:articleId',
-    name: 'ブログ記事',
+    name: 'BLOG',
     component: BlogDetail,
   },
   {
     path: '/inquiry',
-    name: 'お問い合わせ',
+    name: 'CONTACT',
     component: Inquiry
   },
   {
     path: '/qa',
-    name: 'よくある質問',
+    name: 'Q & A',
     component: Qa
   },
    {
